@@ -1,0 +1,210 @@
+@charset 'utf-8';
+@import 'settings';
+@import 'foundation';
+@import 'motion-ui';
+@import "typography";
+@import "font-awesome";
+@include foundation-global-styles;
+@include foundation-grid;
+@include foundation-flex-grid;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms; // @include foundation-range-input;
+@include foundation-accordion;
+@include foundation-accordion-menu;
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-button-group;
+@include foundation-callout;
+@include foundation-close-button;
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-drilldown-menu;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+@include foundation-flex-video;
+@include foundation-label;
+@include foundation-media-object;
+@include foundation-off-canvas;
+@include foundation-orbit;
+@include foundation-pagination;
+@include foundation-progress-bar; // @include foundation-progress-element;
+// @include foundation-meter-element;
+@include foundation-slider;
+@include foundation-sticky;
+@include foundation-reveal;
+@include foundation-switch;
+@include foundation-table;
+@include foundation-tabs;
+@include foundation-thumbnail;
+@include foundation-title-bar;
+@include foundation-tooltip;
+@include foundation-top-bar;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
+@include foundation-flex-classes;
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+body {
+    background-color: $primary-color;
+    font-family: mont;
+
+    h1,
+    h2 {
+        padding: 50px;
+    }
+}
+
+footer,
+header {
+    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.25);
+}
+
+.animate {
+    animation: fadeIn 0.2s ease-out;
+}
+
+.logo {
+    width: 100px;
+    @include breakpoint(medium) {
+        width: 80px;
+    }
+
+    &:hover {
+        animation: logo-blink 0.3s ease-out;
+    }
+}
+
+.nav-menu {
+    margin: 0;
+    list-style-type: none;
+
+    a {
+        transition: all 0.2s;
+        color: black;
+        text-decoration: none;
+
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+    @include breakpoint(medium) {
+        display: flex;
+        justify-content: space-around;
+        font-size: 18px;
+    }
+    @include breakpoint(large) {
+        font-size: 22px;
+    }
+}
+
+.welcome-btn {
+    transition: all 0.3s;
+    border: 2px solid red;
+    border-radius: 10px;
+    padding: 10px 80px;
+    display: inline-block;
+
+    &:hover {
+        background-color: $primary-bg-color;
+    }
+
+    a {
+        color: $secondary-color;
+    }
+}
+
+.img-1 {
+    background-repeat: no-repeat;
+    background-image: url('../img/banner-dogs-small-1.png');
+    background-size: contain;
+    background-position: center;
+    margin: 20px 0;
+    height: 40vw;
+    @include breakpoint(medium) {
+        height: 45vh;
+        max-height: 280px;
+    }
+    @include breakpoint(large) {
+        background-image: url('../img/banner-dogs-large.png');
+        height: 60vh;
+    }
+}
+
+.img-2 {
+    background-repeat: no-repeat;
+    background-image: url('../img/banner-dogs-small-2.png');
+    background-size: contain;
+    background-position: center;
+    margin: 20px 0;
+    height: 40vw;
+}
+
+.news-btn {
+    a {
+        transition: all 0.5s;
+        color: $secondary-color;
+        border-radius: 10px;
+        padding: 5px;
+        &:hover {
+            background-color: $secondary-bg-color;
+        }
+    }
+}
+
+.map-section {
+    background-color: lightblue;
+    height: 500px;
+}
+
+.footer-grid {
+    font-size: 0.75em;
+    padding: 20px;
+
+    i {
+        padding: 0 25px 10px 0;
+    }
+}
+
+.fa-facebook:hover {
+    color: #3b5998;
+}
+
+.fa-instagram:hover {
+    color: #8a3ab9;
+}
+@keyframes fadeIn {
+    from {
+        transform: translateX(100px);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes logo-blink {
+    from {
+        transform: rotate(0);
+    }
+
+    20% {
+        transform: rotate(10deg);
+    }
+
+    40% {
+        transform: rotate(-10deg);
+    }
+
+    60% {
+        transform: rotate(10deg);
+    }
+
+    80% {
+        transform: rotate(-10deg);
+    }
+
+    to {
+        transform: rotate(0);
+    }
+}

@@ -1,0 +1,35 @@
+/*
+
+SASS
+
+*/
+
+@import "_variables.scss";
+@import "_mixins.scss";
+
+
+.mainContainer {
+  background-image: url("/images/Bez-nazwy-1.png");
+  background-size: 100% 100%;
+width: 100vw;
+height: 800px;
+}
+.hero {
+    background-size: 100px 133px;
+  background-image: url("/images/mario1.png");
+  width: 100px;
+  height: 133px;
+  position: absolute;
+  top: 56%;
+  left: 25%;
+}
+
+.secImg {
+background-size: 100px 133px;
+  background-image: url("/images/mario2.png");
+  width: 100px;
+  height: 133px;
+  position: absolute;
+  top: 56%;
+  left: 25%;
+}

@@ -1,0 +1,47 @@
+#main_container {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 80vw;
+    height: 95vh;
+    background-color: lightblue;
+    overflow: auto;
+    border: 3px solid blue;
+
+}
+.chatMessages {
+  overflow: auto;
+  list-style-type: none;
+  transition: 2s;
+}
+li {
+  display: block;
+}
+li:nth-child(odd) {
+  background-color: lightgreen;
+
+}
+
+
+.chatRoom form {
+    position: fixed;
+    left: 40%;
+    bottom: 0;
+}
+.animation {
+    animation-name: flower;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 3s;
+}
+
+/*@keyframes flower {
+    from {
+  transform: rotate(30deg);
+    }
+    to {
+
+    }
+}*/

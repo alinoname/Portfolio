@@ -1,0 +1,28 @@
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+    border: 5px solid black;
+}
+@mixin tablet {
+     @media #{$tablet}{
+        @content
+    }
+}
+@mixin tablet2 {
+     @media #{$tablet2}{
+        @content
+    }
+}
+@mixin desktop {
+     @media #{$desktop}{
+        @content
+    }
+}
+@mixin flexbox {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: flex;
+}
